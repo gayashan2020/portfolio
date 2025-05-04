@@ -6,7 +6,14 @@ export default function Contact() {
 
         <div className="flex flex-col md:flex-row gap-12">
           <div className="md:w-1/2">
-            <form className="space-y-6">
+            <form 
+              action="https://formspree.io/f/xdkgerpr" 
+              method="POST"
+              className="space-y-6"
+            >
+              <input type="hidden" name="_subject" value="New contact from portfolio website" />
+              <input type="hidden" name="_replyto" value="gayashanweerasundara@gmail.com" />
+              
               <div>
                 <label
                   htmlFor="name"
@@ -18,9 +25,11 @@ export default function Contact() {
                   type="text"
                   id="name"
                   name="name"
+                  required
                   className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
                 />
               </div>
+              
               <div>
                 <label
                   htmlFor="email"
@@ -32,9 +41,11 @@ export default function Contact() {
                   type="email"
                   id="email"
                   name="email"
+                  required
                   className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
                 />
               </div>
+              
               <div>
                 <label
                   htmlFor="subject"
@@ -45,10 +56,12 @@ export default function Contact() {
                 <input
                   type="text"
                   id="subject"
-                  name="subject"
+                  name="_subject"
+                  required
                   className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
                 />
               </div>
+              
               <div>
                 <label
                   htmlFor="message"
@@ -60,9 +73,11 @@ export default function Contact() {
                   id="message"
                   name="message"
                   rows="4"
+                  required
                   className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
                 ></textarea>
               </div>
+              
               <button
                 type="submit"
                 className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg transition-colors duration-300 w-full"
